@@ -1,0 +1,153 @@
+/* CSS style file
+The color palette and design choices were inspired from real websites and W3C recommendations.
+Using percentages for size calculations benefits android/iOS devices.
+
+Parameters used :
+font-family sets the text font.
+background-color sets the background color.
+color sets the text color.
+margin adds a margin.
+padding adds space inside the button for cleaner look.
+border adjusts the border around an area.
+border-radius adds rounded corners to the border.
+text-align aligns the text, very useful for compatibility across devices.
+box-shadow adds a modern box-like look to text areas.
+
+*/
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+
+/*Set the waterfall image in the background*/
+
+background-image: url("welcome.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    color: #333;
+}
+
+nav a:hover {
+    background-color: #ddd;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Style the contact us form */
+
+#contact {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#contact label {
+    font-weight: bold;
+}
+
+#contact input[type="text"],
+#contact input[type="number"],
+
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+#contact input[type="submit"] {
+    background-color: #4CAF50; /* Same color as page header for conssitency and beauty*/
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green when submit button is hovered */
+}
+
+/* End form style */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.animal {
+    max-width: 100%;
+    height: auto;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook-f {
+  font-size: 40px;
+  margin: 20px;
+  text-decoration: none;
+  color: #1877F2;
+}
+
+.fa-twitter {
+  font-size: 40px;
+  margin: 20px;
+  text-decoration: none;
+  color: #1DA1F2;
+}
+
+.fa-instagram {
+  font-size: 40px;
+  margin: 20px;
+  text-decoration: none;
+  color: #833AB4;
+}
+
+.media {
+  text-align: center;
+        }
+
+.links {
+  color: #4CAF50;
+	}
