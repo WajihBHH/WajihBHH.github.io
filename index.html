@@ -1,6 +1,17 @@
-# WajihBHH.github.io
 <!DOCTYPE html>
 <html lang="en">
+
+<!--
+A homepage that has links to 26 pages each describing an animal.
+It has a header, general introduction, an About Us section, a Contact Us section,
+Sources section and a footer with social media links, Page Print prompt and copyright.
+
+The about us section contains the author's resume, and contact us section has a form for hiring.
+A random knowledge is generated on the side every time the page loads.
+
+The head has links to CSS and JS scripts that add stylisation and additional features like animations, respectively.
+This website was created with cross-platform portability and ease of access in mind.
+-->
 
 <head>
 	<meta charset="UTF-8">
@@ -13,46 +24,48 @@
 
 <body>
 
+<a id="home"></a>
+
 <header>
     <h1><span id="Title">Welcome to A-nimal-Z ! </span></h1>
 
 </header>
 
 <nav class="links">
-    <a href="#home">Home</a> |
+    <a href="#">Home</a> |
     <a href="#about">About Us</a> |
     <a href="#contact">Contact Us</a>
 
 </nav>
 
 <nav class="links">
-    <a href="animals/a.html">A</a> |
-    <a href="animals/b.html">B</a> |
-    <a href="animals/c.html">C</a> |
-    <a href="animals/d.html">D</a> |
-    <a href="animals/e.html">E</a> |
-    <a href="animals/f.html">F</a> |
-    <a href="animals/g.html">G</a> |
-    <a href="animals/h.html">H</a> |
-    <a href="animals/i.html">I</a> |
-    <a href="animals/j.html">J</a> |
-    <a href="animals/k.html">K</a> |
-    <a href="animals/l.html">L</a> |
-    <a href="animals/m.html">M</a> |
-    <a href="animals/n.html">N</a> |
-    <a href="animals/o.html">O</a> |
-    <a href="animals/p.html">P</a> |
-    <a href="animals/q.html">Q</a> |
-    <a href="animals/r.html">R</a> |
-    <a href="animals/s.html">S</a> |
-    <a href="animals/t.html">T</a> |
-    <a href="animals/u.html">U</a> |
-    <a href="animals/v.html">V</a> |
-    <a href="animals/w.html">W</a> |
-    <a href="animals/x.html">X</a> |
-    <a href="animals/y.html">Y</a> |
-    <a href="animals/z.html">Z</a>
-
+	<a href="animals/a.html">A</a> |
+	<a href="animals/b.html">B</a> |
+	<a href="animals/c.html">C</a> |
+	<a href="animals/d.html">D</a> |
+	<a href="animals/e.html">E</a> |
+	<a href="animals/f.html">F</a> |
+	<a href="animals/g.html">G</a> |
+	<a href="animals/h.html">H</a> |
+	<a href="animals/i.html">I</a> |
+	<a href="animals/j.html">J</a> |
+	<a href="animals/k.html">K</a> |
+	<a href="animals/l.html">L</a> |
+	<a href="animals/m.html">M</a> |
+	<a href="animals/n.html">N</a> |
+	<a href="animals/o.html">O</a> |
+	<a href="animals/p.html">P</a> |
+	<a href="animals/q.html">Q</a> |
+	<a href="animals/r.html">R</a> |
+	<a href="animals/s.html">S</a> |
+	<a href="animals/t.html">T</a> |
+	<a href="animals/u.html">U</a> |
+	<a href="animals/v.html">V</a> |
+	<a href="animals/w.html">W</a> |
+	<a href="animals/x.html">X</a> |
+	<a href="animals/y.html">Y</a> |
+	<a href="animals/z.html">Z</a>
+	<button onclick="redirect()">Surprise</button>
 </nav>
 
 <!-- List of all 26 animals
@@ -84,7 +97,7 @@ Yak
 Zebra
 -->
 
-<section id="home">
+<section id="introduction">
 	<h2>About A-nimal-Z</h2>
 	<p> AnimalZ is a fun website created to help you learn about many interesting animals, from A to Z !
 	<br>
@@ -94,8 +107,16 @@ Zebra
 
 <section id="about">
 	<h2>More about us</h2>
-		<p> This website was created as a project to perhaps bring children some interesting new knowledge about the world of animals, while also having fun.  You can explore animals from any letter of the alphabet, enabling a fun and interactive learning experience.</p>
+		<p> This website was created as a project to perhaps bring children some interesting new knowledge about the world of animals, while also having fun.
+		You can explore animals from any letter of the alphabet, enabling a fun and interactive learning experience.</p>
 		<p>Moreover, this project aims to provide children with engaging knowledge about the animal kingdom. The ultimate goal is to ensure that learning about animals is both educational and enjoyable. </p>
+	<h3>Our Team</h3>
+	<div class="CV">
+		<ul>
+		<li><strong>Name:</strong>Wajih BHH</li>
+		</ul>
+
+	</div>
 
 </section>
 
@@ -103,27 +124,34 @@ Zebra
 	<h2>Contact Us</h2>
 	<p>If you have any questions or feedback, feel free to reach out at <a href="mailto:wajih.bhh@outlook.com">wajih.bhh@outlook.com</a>.</p>
 	<p>We are currently recruiting! Submit your resume to join our wonderful team:</p>
-	<form action="/submit_resume" method="post">
+	<form action="/submit_resume" method="post" onsubmit="return validateForm()">
         	<label for="name">Name:</label>
-        	<input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+        	<input type="text" id="name" name="name" placeholder="Your Name" required>
+		<br><br>
         
         	<label for="age">Age:</label>
-        	<input type="number" id="age" name="age" placeholder="Your Age" required><br><br>
+        	<input type="number" id="age" name="age" placeholder="Your Age" required>
+		<br><br>
         
         	<label for="university">University:</label>
-        	<input type="text" id="university" name="university" placeholder="Your University" required><br><br>
+        	<input type="text" id="university" name="university" placeholder="Your University" required>
+		<br><br>
         
         	<label for="degree">Degree:</label>
-        	<input type="text" id="degree" name="degree" placeholder="Your Degree" required><br><br>
+        	<input type="text" id="degree" name="degree" placeholder="Your Degree" required>
+		<br><br>
         
         	<label for="languages">Languages:</label>
-        	<input type="text" id="languages" name="languages" placeholder="Languages Spoken" required><br><br>
+        	<input type="text" id="languages" name="languages" placeholder="Languages Spoken" required>
+		<br><br>
         
         	<label for="skills">Skills:</label>
-        	<textarea id="skills" name="skills" placeholder="Skills"></textarea><br><br>
+        	<textarea id="skills" name="skills" placeholder="Skills"></textarea>
+		<br><br>
         
         	<label for="experience">Previous Work Experience:</label>
-        	<textarea id="experience" name="experience" placeholder="Previous Work Experience"></textarea><br><br>
+        	<textarea id="experience" name="experience" placeholder="Previous Work Experience"></textarea>
+		<br><br>
         
         	<input type="submit" value="Submit">
 	</form>
@@ -133,21 +161,33 @@ Zebra
 <section id="sources">
 	<h2>Sources</h2>
 	<ul>
-		<li><a href="https://https://www.w3schools.com/howto/howto_css_social_media_buttons.asp">W3schools Documentation</a></li>
+		<li><a href="https://https://www.w3schools.com">W3schools Documentation</a></li>
 		<li><a href="https://fontawesome.com">Fontawesome</a></li>
+		<li><a href="https://stackoverflow.com/questions/tagged/javascript">StackOverflow</a></li>
+		<li><a href="https://www.freecodecamp.org/news/the-css-handbook-a-handy-guide-to-css-for-developers-b56695917d11/">Freecodecamp</a></li>
+		<li><a href="https://jigsaw.w3.org/css-validator/validator">W3 CSS validation</a></li>
+		<li><a href="https://validator.w3.org/#validate_by_upload">W3 HTML validation</a></li>
+		<li><a href="https://www.thefactsite.com/300-random-animal-facts">Animal Facts</a></li>
+
 	</ul>
 
 </section>
 
+<aside id="factOfTheDay">
+    <h2>Fact of the Day</h2>
+    <p id="fact"></p>
+
+</aside>
+
 <footer>
-	<a href="javascript:window.print();">Print Page</a>
+	<!--<a href="javascript:window.print();">Print Page</a>-->
+	<a href="#" onclick="window.print(); return false;"><i class="fas fa-print"></i> Print Page</a>
 	<div class="media">
         	<a href="https://www.facebook.com" title="Facebook" class="fab fa-facebook-f"></a>
         	<a href="https://www.instagram.com" title="Instagram" class="fab fa-instagram"></a>
         	<a href="https://twitter.com/?lang=en" title="Twitter" class="fab fa-twitter"></a>
 	</div>
 	<p>&copy; 2024 A-nimal-Z. All rights reserved.</p>
-
 
 </footer>
 
