@@ -24,6 +24,7 @@ body {
 
 /*Set the waterfall image in the background*/
 
+background-color: #f0f0f0; /* Backup background color set to a shade of gray*/
 background-image: url("welcome.jpg");
 background-size: cover;
 background-repeat: no-repeat;
@@ -61,6 +62,13 @@ section {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: rgba(255, 255, 255, 0.9);
+}
+
+.CV {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Style the contact us form */
@@ -105,8 +113,30 @@ section {
 
 /* End form style */
 
+#factOfTheDay {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    width: 20%;
+    background-color: #4CAF50; /* Again, same color as page header for conssitency and beauty*/
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+
+}
+
+#factOfTheDay h2 {
+    margin-top: 0;
+}
+
+#factOfTheDay p {
+    font-style: italic;
+}
+
 footer {
-    background-color: #333;
+    background-color: #4CAF50;
     color: white;
     text-align: center;
     padding: 10px;
@@ -150,3 +180,14 @@ footer {
 .links {
   color: #4CAF50;
 	}
+
+/* Fixes visual issues on mobile concerning the fact of the day section*/
+@media (max-width: 768px) {
+    #factOfTheDay {
+        position: static;
+        width: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+}
